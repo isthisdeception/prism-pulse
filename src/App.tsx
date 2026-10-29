@@ -4,6 +4,8 @@ import { SelectedWorks } from './sections/SelectedWorks'
 import { FilmsShowcase } from './sections/FilmsShowcase'
 import { Services } from './sections/Services'
 import { About } from './sections/About'
+import { Contact } from './sections/Contact'
+import { WhatsAppPopup } from './components/WhatsAppPopup'
 import { Container } from './components/Container'
 import { siteConfig } from './data/siteConfig'
 
@@ -32,24 +34,12 @@ export default function App() {
         {/* Step 5: About the Creator & Vision */}
         <About />
 
-
-        <section
-          id="contact"
-          className="scroll-mt-24 py-16 border-b border-[#222533]/50 text-center"
-        >
-          <Container size="narrow">
-            <span className="text-xs uppercase tracking-widest text-amber-400 font-medium">
-              Get in Touch
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-light text-[#f3f3f6] mt-2 mb-3">
-              Start a Conversation
-            </h2>
-            <p className="text-sm text-[#9fa2b4] max-w-md mx-auto">
-              Ready for Step 7: Direct WhatsApp and social conversion channels.
-            </p>
-          </Container>
-        </section>
+        {/* Step 6: Contact & Social Channels */}
+        <Contact />
       </main>
+
+      {/* Step 6: Delayed WhatsApp Action Popup (7s delay, safe storage) */}
+      <WhatsAppPopup />
 
       {/* Global Minimal Footer */}
       <footer className="border-t border-[#222533] py-8 text-center text-xs text-[#676b7e] bg-[#090a0f]">
@@ -60,3 +50,4 @@ export default function App() {
     </div>
   )
 }
+
