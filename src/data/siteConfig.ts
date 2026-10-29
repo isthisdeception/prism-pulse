@@ -4,6 +4,9 @@
  * Placeholders are marked with `TODO_REPLACE` so the owner can easily update them.
  */
 
+import portraitImg from '../assets/mubarak-photo.jpg'
+
+
 export interface NavItem {
   label: string
   href: string
@@ -69,8 +72,8 @@ export const siteConfig: SiteConfig = {
     ],
     location: 'Available All Over Bangladesh & On Location',
     // Dummy behind-the-scenes portrait photo - replaceable by the photographer
-    portraitImage: 'https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=1200&q=80',
-    portraitAlt: 'Cinematographer holding camera on location at golden hour',
+    portraitImage: portraitImg,
+    portraitAlt: 'Mubarak — Cinematographer & Drone Creator',
     approachTitle: 'Guiding Principles',
     approachPoints: [
       {
