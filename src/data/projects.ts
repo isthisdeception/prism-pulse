@@ -26,6 +26,9 @@ export interface Project {
   poster?: string // Video poster before play is triggered
   featured?: boolean
   aspectRatio?: 'landscape' | 'portrait' | 'square'
+  duration?: string // e.g. "02:15"
+  resolution?: string // e.g. "4K DCI / 2.39:1"
+  role?: string // e.g. "Director of Photography"
 }
 
 export const CATEGORIES: ProjectCategory[] = [
@@ -60,7 +63,10 @@ export const PROJECTS: Project[] = [
     alt: 'Moody silhouette against a vibrant dusk horizon and glowing sky',
     videoUrl: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ', // TODO_REPLACE
     featured: true,
-    aspectRatio: 'landscape'
+    aspectRatio: 'landscape',
+    duration: '03:12',
+    resolution: '2.39:1 Anamorphic · 4K',
+    role: 'Director of Photography'
   },
   {
     id: 'coastal-ridge-flight',
@@ -74,7 +80,10 @@ export const PROJECTS: Project[] = [
     alt: 'Aerial bird-eye view of turquoise waves crashing against rocky shoreline',
     videoUrl: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ', // TODO_REPLACE
     featured: true,
-    aspectRatio: 'landscape'
+    aspectRatio: 'landscape',
+    duration: '01:45',
+    resolution: '4K D-Log 60fps',
+    role: 'Lead Drone Pilot & DP'
   },
   {
     id: 'lumina-editorial',
@@ -100,7 +109,10 @@ export const PROJECTS: Project[] = [
     alt: 'Sleek sports car cutting through rain-soaked city asphalt under neon lights',
     videoUrl: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ', // TODO_REPLACE
     featured: true,
-    aspectRatio: 'landscape'
+    aspectRatio: 'landscape',
+    duration: '01:15',
+    resolution: 'ProRes 4444 · 4K',
+    role: 'Camera Operator & Colorist'
   },
   {
     id: 'solstice-rhythm',
@@ -114,7 +126,10 @@ export const PROJECTS: Project[] = [
     alt: 'Silhouette of performer illuminated by vibrant stage beams and ambient haze',
     videoUrl: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ', // TODO_REPLACE
     featured: false,
-    aspectRatio: 'landscape'
+    aspectRatio: 'landscape',
+    duration: '02:50',
+    resolution: 'Super 35mm Digital · 4K',
+    role: 'Director of Photography'
   },
   {
     id: 'terra-incognita',
@@ -124,9 +139,14 @@ export const PROJECTS: Project[] = [
     clientOrContext: 'Environmental Heritage Doc',
     description: 'Geometric topography of geothermal geysers and mineral deposits photographed from 400 feet.',
     image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1600&q=80',
+    poster: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1600&q=80',
     alt: 'Expansive aerial drone vista of winding desert canyon road',
+    videoUrl: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ', // TODO_REPLACE
     featured: false,
-    aspectRatio: 'landscape'
+    aspectRatio: 'landscape',
+    duration: '02:10',
+    resolution: 'ProRes Raw Aerial',
+    role: 'Aerial Cinematographer'
   },
   {
     id: 'monochrome-silence',
@@ -152,7 +172,27 @@ export const PROJECTS: Project[] = [
     alt: 'Macro luxury timepiece mechanical movement with golden reflections',
     videoUrl: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ', // TODO_REPLACE
     featured: false,
-    aspectRatio: 'landscape'
+    aspectRatio: 'landscape',
+    duration: '00:45',
+    resolution: 'Macro 120fps · 4K',
+    role: 'Director of Photography'
+  },
+  {
+    id: 'silent-glacier-flight',
+    title: 'Silent Glacier Flight',
+    category: 'Drone',
+    year: '2025',
+    clientOrContext: 'Alpine Expeditions Doc',
+    description: 'Sub-zero FPV glide down crevasses and frozen waterfalls. Video screener is currently in final color pass.',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80',
+    poster: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80',
+    alt: 'Towering alpine snowy mountains with ice clouds',
+    videoUrl: '', // Demonstrates graceful placeholder when video URL is unconfigured
+    featured: false,
+    aspectRatio: 'landscape',
+    duration: '01:30',
+    resolution: 'FPV 4K 60fps',
+    role: 'High-Altitude Drone Pilot'
   }
 ]
 
@@ -171,5 +211,16 @@ export const SHOWREEL_PROJECT: Project = {
   alt: 'Cinematographer holding camera rig framed against golden hour mountain horizon',
   videoUrl: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ', // TODO_REPLACE
   featured: true,
-  aspectRatio: 'landscape'
+  aspectRatio: 'landscape',
+  duration: '02:00',
+  resolution: '4K DCI · 2.39:1 Anamorphic',
+  role: 'Director of Photography & Colorist'
 }
+
+/**
+ * Filtered list of films and motion items for the Films Showcase section
+ */
+export const FILM_SHOWCASE: Project[] = [
+  SHOWREEL_PROJECT,
+  ...PROJECTS.filter((p) => p.category === 'Films' || p.category === 'Drone' || (p.videoUrl !== undefined && p.videoUrl !== ''))
+]

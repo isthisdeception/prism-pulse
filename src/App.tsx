@@ -1,6 +1,7 @@
 import { Header } from './components/Header'
 import { Hero } from './sections/Hero'
 import { SelectedWorks } from './sections/SelectedWorks'
+import { FilmsShowcase } from './sections/FilmsShowcase'
 import { Container } from './components/Container'
 import { siteConfig } from './data/siteConfig'
 
@@ -20,23 +21,9 @@ export default function App() {
         {/* Step 3: Selected Works Gallery & Lightbox */}
         <SelectedWorks />
 
+        {/* Step 4: Films, Cinematography & Drone Showcase */}
+        <FilmsShowcase />
 
-        <section
-          id="films"
-          className="scroll-mt-24 py-16 border-b border-[#222533]/50 text-center"
-        >
-          <Container size="narrow">
-            <span className="text-xs uppercase tracking-widest text-amber-400 font-medium">
-              Motion
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-light text-[#f3f3f6] mt-2 mb-3">
-              Films & Cinematography
-            </h2>
-            <p className="text-sm text-[#9fa2b4] max-w-md mx-auto">
-              Ready for Step 4: Video showreels with on-demand playback.
-            </p>
-          </Container>
-        </section>
 
         <section
           id="services"
