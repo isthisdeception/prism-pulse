@@ -68,7 +68,7 @@ export const siteConfig: SiteConfig = {
       'Prism Pulse is an independent visual atelier founded on a single conviction: every frame carries emotional weight. Combining disciplined cinematic lighting with instinctive handheld and drone camera work, projects transcend standard documentation into enduring visual experiences.',
       'From editorial portraits and high-energy commercial campaigns to sweeping aerial landscape captures, every production is executed with refined color grading, meticulous sound design, and an unwavering focus on pacing and feeling.'
     ],
-    location: 'Available Worldwide & On Location',
+    location: 'Available All Over Bangladesh & On Location',
     // Dummy behind-the-scenes portrait photo - replaceable by the photographer
     portraitImage: 'https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=1200&q=80',
     portraitAlt: 'Cinematographer holding camera on location at golden hour',
@@ -87,17 +87,18 @@ export const siteConfig: SiteConfig = {
       {
         number: '03',
         title: 'Agile & Drone-Certified',
-        description: 'FAA Part 107 certified for safe, legal, and rapid aerial deployment from rugged remote locations to urban environments.'
+        description: 'Certified for safe, legal, and rapid aerial deployment from scenic remote spots to urban production sets.'
       }
     ]
   },
   contact: {
     // === REPLACE THESE VALUES WITH YOUR REAL CONTACT DETAILS ===
-    whatsappNumber: 'TODO_REPLACE_PHONE_NUMBER', // Example: '+15551234567'
+    whatsappNumber: 'TODO_REPLACE_PHONE_NUMBER', // Example: '+8801XXXXXXXXX'
     whatsappUrl: 'https://wa.me/TODO_REPLACE_WITH_NUMBER?text=Hello%20Prism%20Pulse,%20I%20would%20like%20to%20discuss%20a%20project',
     email: 'contact@TODO_REPLACE_DOMAIN.com',
-    phoneDisplay: '+1 (555) 019-2834 (TODO_REPLACE)',
-    locationDisplay: 'New York / Worldwide (TODO_REPLACE)',
+    phoneDisplay: '+880 1XXX-XXXXXX (TODO_REPLACE)',
+    locationDisplay: 'Available All Over Bangladesh · Based in Dhaka (TODO_REPLACE)',
+
     socials: {
       whatsapp: 'https://wa.me/TODO_REPLACE_WITH_NUMBER',
       instagram: 'https://instagram.com/TODO_REPLACE_HANDLE',

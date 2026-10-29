@@ -44,8 +44,9 @@ export function Contact() {
           </h2>
 
           <p className="text-sm sm:text-base text-[#9fa2b4] font-light leading-relaxed max-w-xl mx-auto">
-            Available for commercial campaigns, narrative films, fine-art portraits, and licensed drone cinematography worldwide.
+            Available for commercial campaigns, narrative films, fine-art portraits, and licensed drone cinematography all over Bangladesh.
           </p>
+
         </div>
 
         {/* Primary Conversion Card */}

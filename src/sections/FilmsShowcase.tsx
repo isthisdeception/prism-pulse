@@ -236,7 +236,8 @@ export function FilmsShowcase() {
             <Shield className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
             <div>
               <span className="font-semibold text-[#f3f3f6] block">Licensed Aerial Operations</span>
-              <span className="text-[#676b7e] mt-0.5 block">FAA Part 107 certified for commercial drone flights worldwide.</span>
+              <span className="text-[#676b7e] mt-0.5 block">Certified commercial drone operations all over Bangladesh.</span>
+
             </div>
           </div>
 

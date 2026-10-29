@@ -205,8 +205,9 @@ export function SelectedWorks() {
               Have a bespoke production or shoot in mind?
             </h3>
             <p className="text-xs sm:text-sm text-[#9fa2b4] mt-1 font-light">
-              Available for commercial assignments, destination weddings, and editorial campaigns worldwide.
+              Available for commercial assignments, destination weddings, and editorial campaigns all over Bangladesh.
             </p>
+
           </div>
 
           <a
