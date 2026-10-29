@@ -6,7 +6,6 @@ import {
   MessageCircle,
   Mail,
   MapPin,
-  Video,
   ArrowRight,
   Send,
   Globe,
@@ -209,20 +208,6 @@ export function Contact() {
               >
                 <YouTubeIcon className="w-4 h-4 text-red-400" />
                 <span>YouTube</span>
-              </a>
-            )}
-
-
-            {/* Vimeo */}
-            {contact.socials.vimeo && (
-              <a
-                href={contact.socials.vimeo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#12131a] hover:bg-[#181a24] border border-[#222533] hover:border-amber-400/40 text-xs font-medium text-[#9fa2b4] hover:text-[#f3f3f6] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
-              >
-                <Video className="w-4 h-4 text-sky-400" />
-                <span>Vimeo</span>
               </a>
             )}
           </div>

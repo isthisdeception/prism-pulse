@@ -50,7 +50,6 @@ export interface SiteConfig {
       instagram: string // TODO_REPLACE
       facebook: string // TODO_REPLACE
       youtube?: string // TODO_REPLACE
-      vimeo?: string // TODO_REPLACE
     }
   }
   navigation: NavItem[]
@@ -103,8 +102,7 @@ export const siteConfig: SiteConfig = {
       whatsapp: 'https://wa.me/8801313323612',
       instagram: 'https://instagram.com/TODO_REPLACE_HANDLE',
       facebook: 'https://facebook.com/TODO_REPLACE_PAGE',
-      youtube: 'https://youtube.com/@TODO_REPLACE_CHANNEL',
-      vimeo: 'https://vimeo.com/TODO_REPLACE_USER'
+      youtube: 'https://youtube.com/@TODO_REPLACE_CHANNEL'
     }
   },
   navigation: [
