@@ -1,5 +1,6 @@
 import { Header } from './components/Header'
 import { Hero } from './sections/Hero'
+import { SelectedWorks } from './sections/SelectedWorks'
 import { Container } from './components/Container'
 import { siteConfig } from './data/siteConfig'
 
@@ -16,23 +17,9 @@ export default function App() {
         {/* Step 2: Cinematic Hero */}
         <Hero />
 
-        {/* Anchor targets for smooth scrolling navigation & subsequent steps */}
-        <section
-          id="work"
-          className="scroll-mt-24 py-16 border-b border-[#222533]/50 text-center"
-        >
-          <Container size="narrow">
-            <span className="text-xs uppercase tracking-widest text-amber-400 font-medium">
-              Portfolio
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-light text-[#f3f3f6] mt-2 mb-3">
-              Selected Works
-            </h2>
-            <p className="text-sm text-[#9fa2b4] max-w-md mx-auto">
-              Ready for Step 3: Filterable gallery grid and image lightbox.
-            </p>
-          </Container>
-        </section>
+        {/* Step 3: Selected Works Gallery & Lightbox */}
+        <SelectedWorks />
+
 
         <section
           id="films"
