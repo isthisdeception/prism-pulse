@@ -8,7 +8,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
-  // Track scroll position for subtle styling enhancements
+  // Track scroll position for subtle header background transition
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
@@ -17,7 +17,7 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Close mobile menu on Esc key
+  // Close mobile menu on Escape key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && mobileMenuOpen) {
@@ -41,125 +41,154 @@ export function Header() {
   }, [mobileMenuOpen])
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-[#090a0f]/95 backdrop-blur-md border-b border-[#222533] shadow-lg shadow-black/40 py-3.5'
-          : 'bg-[#090a0f]/75 backdrop-blur-sm border-b border-[#222533]/50 py-5'
-      }`}
-    >
-      <Container className="flex items-center justify-between">
-        {/* Brand Wordmark */}
-        <a
-          href="#"
-          className="group flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-sm"
-          aria-label={`${siteConfig.brand.name} Home`}
-        >
-          <div className="w-8 h-8 rounded bg-[#181a24] border border-amber-400/40 flex items-center justify-center font-bold text-amber-400 text-xs tracking-wider transition-colors duration-200 group-hover:border-amber-400 group-hover:bg-amber-400/10">
-            PP
-          </div>
-          <div className="flex flex-col">
-            <span className="font-semibold tracking-[0.22em] text-sm sm:text-base uppercase text-[#f3f3f6] transition-colors duration-200 group-hover:text-amber-300">
-              {siteConfig.brand.name}
-            </span>
-            <span className="text-[10px] tracking-widest uppercase text-[#676b7e] hidden sm:block">
-              Visual Direction
-            </span>
-          </div>
-        </a>
-
-        {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-8" aria-label="Main Navigation">
-          {siteConfig.navigation.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium tracking-wide text-[#9fa2b4] hover:text-[#f3f3f6] transition-colors duration-200 py-1 relative group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-sm"
-            >
-              {item.label}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-200 group-hover:w-full opacity-80" />
-            </a>
-          ))}
-        </nav>
-
-        {/* Desktop WhatsApp Action Button */}
-        <div className="hidden md:flex items-center gap-4">
-          <Button
-            as="a"
-            href={siteConfig.contact.whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="primary"
-            size="sm"
-            className="shadow-sm"
-          >
-            <MessageCircle className="w-3.5 h-3.5" />
-            <span>Chat on WhatsApp</span>
-          </Button>
-        </div>
-
-        {/* Mobile Menu Toggle Button */}
-        <button
-          type="button"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center p-2 rounded-md text-[#9fa2b4] hover:text-[#f3f3f6] hover:bg-[#181a24] border border-transparent hover:border-[#222533] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 transition-colors duration-200"
-          aria-expanded={mobileMenuOpen}
-          aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-          aria-controls="mobile-menu"
-        >
-          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
-
-      </Container>
-
-      {/* Mobile Drawer Menu */}
-      <div
-        id="mobile-menu"
-        className={`fixed inset-x-0 top-[65px] bottom-0 bg-[#090a0f]/98 backdrop-blur-xl border-t border-[#222533] transition-all duration-300 flex flex-col md:hidden z-40 ${
-          mobileMenuOpen
-            ? 'opacity-100 pointer-events-auto translate-y-0'
-            : 'opacity-0 pointer-events-none -translate-y-2'
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+          scrolled
+            ? 'bg-[#090a0f]/95 backdrop-blur-md border-b border-[#222533] shadow-lg shadow-black/40 py-3.5'
+            : 'bg-[#090a0f]/80 backdrop-blur-sm border-b border-[#222533]/50 py-5'
         }`}
-        aria-hidden={!mobileMenuOpen}
       >
-        <Container className="py-6 flex flex-col justify-between flex-1 overflow-y-auto">
-          {/* Navigation Links List */}
-          <nav className="flex flex-col gap-2" aria-label="Mobile Navigation">
+        <Container className="flex items-center justify-between">
+          {/* Brand Wordmark */}
+          <a
+            href="#"
+            className="group flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-sm"
+            aria-label={`${siteConfig.brand.name} Home`}
+          >
+            <div className="w-8 h-8 rounded bg-[#181a24] border border-amber-400/40 flex items-center justify-center font-bold text-amber-400 text-xs tracking-wider transition-colors duration-200 group-hover:border-amber-400 group-hover:bg-amber-400/10">
+              PP
+            </div>
+            <div className="flex flex-col">
+              <span className="font-semibold tracking-[0.22em] text-sm sm:text-base uppercase text-[#f3f3f6] transition-colors duration-200 group-hover:text-amber-300">
+                {siteConfig.brand.name}
+              </span>
+              <span className="text-[10px] tracking-widest uppercase text-[#676b7e] hidden sm:block">
+                Visual Direction
+              </span>
+            </div>
+          </a>
+
+          {/* Desktop Navigation Links */}
+          <nav className="hidden md:flex items-center gap-8" aria-label="Main Navigation">
             {siteConfig.navigation.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-xl font-medium tracking-wide text-[#9fa2b4] hover:text-amber-400 hover:bg-[#12131a] px-4 py-3.5 rounded-lg border border-transparent hover:border-[#222533] transition-all duration-200 flex items-center justify-between"
+                className="text-sm font-medium tracking-wide text-[#9fa2b4] hover:text-[#f3f3f6] transition-colors duration-200 py-1 relative group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-sm"
               >
-                <span>{item.label}</span>
-                <span className="text-xs uppercase tracking-widest text-[#676b7e]">Explore</span>
+                {item.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-200 group-hover:w-full opacity-80" />
               </a>
             ))}
           </nav>
 
-          {/* Mobile Bottom Actions */}
-          <div className="pt-8 border-t border-[#222533] flex flex-col gap-4 mt-6">
+          {/* Desktop WhatsApp Action Button */}
+          <div className="hidden md:flex items-center gap-4">
             <Button
               as="a"
               href={siteConfig.contact.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               variant="primary"
-              size="lg"
-              className="w-full justify-center"
-              onClick={() => setMobileMenuOpen(false)}
+              size="sm"
+              className="shadow-sm"
             >
-              <MessageCircle className="w-5 h-5" />
+              <MessageCircle className="w-3.5 h-3.5" />
               <span>Chat on WhatsApp</span>
             </Button>
+          </div>
 
-            <div className="text-center text-xs text-[#676b7e] pt-2">
-              <p>{siteConfig.brand.location}</p>
+          {/* Mobile Menu Toggle Button */}
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center p-2 rounded-md text-[#9fa2b4] hover:text-[#f3f3f6] hover:bg-[#181a24] border border-[#2e3346] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 transition-colors duration-200"
+            aria-expanded={mobileMenuOpen}
+            aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-controls="mobile-menu"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6 text-amber-400" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </Container>
+      </header>
+
+      {/* Mobile Drawer (Sibling to header to avoid containing block traps from backdrop-filter) */}
+      {mobileMenuOpen && (
+        <div
+          id="mobile-menu"
+          className="fixed inset-0 z-50 flex flex-col bg-[#090a0f] md:hidden animate-in fade-in duration-200"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile Navigation"
+        >
+          {/* Top Bar inside Drawer */}
+          <div className="flex items-center justify-between px-4 sm:px-6 py-4 border-b border-[#222533] bg-[#090a0f]">
+            <a
+              href="#"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center gap-3"
+              aria-label={`${siteConfig.brand.name} Home`}
+            >
+              <div className="w-8 h-8 rounded bg-[#181a24] border border-amber-400/40 flex items-center justify-center font-bold text-amber-400 text-xs tracking-wider">
+                PP
+              </div>
+              <span className="font-semibold tracking-[0.22em] text-sm uppercase text-[#f3f3f6]">
+                {siteConfig.brand.name}
+              </span>
+            </a>
+
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(false)}
+              className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2 rounded-md text-[#9fa2b4] hover:text-[#f3f3f6] hover:bg-[#181a24] border border-[#2e3346] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+              aria-label="Close navigation menu"
+            >
+              <X className="w-6 h-6 text-amber-400" />
+            </button>
+          </div>
+
+          {/* Navigation Links List */}
+          <div className="flex-1 overflow-y-auto px-4 sm:px-6 py-6 flex flex-col justify-between">
+            <nav className="flex flex-col gap-2.5" aria-label="Mobile Navigation Links">
+              {siteConfig.navigation.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-lg font-medium tracking-wide text-[#f3f3f6] hover:text-amber-300 hover:bg-[#12131a] active:bg-[#181a24] px-4 py-3.5 rounded-xl border border-[#222533] flex items-center justify-between transition-colors duration-150"
+                >
+                  <span>{item.label}</span>
+                  <span className="text-xs uppercase tracking-widest text-[#676b7e]">
+                    Explore →
+                  </span>
+                </a>
+              ))}
+            </nav>
+
+            {/* Mobile Bottom Actions */}
+            <div className="pt-6 border-t border-[#222533] flex flex-col gap-4 mt-6">
+              <Button
+                as="a"
+                href={siteConfig.contact.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="primary"
+                size="lg"
+                className="w-full justify-center shadow-lg shadow-amber-400/15"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <MessageCircle className="w-5 h-5" />
+                <span>Chat on WhatsApp</span>
+              </Button>
+
+              <div className="text-center text-xs text-[#676b7e] pb-2 font-mono">
+                <p>{siteConfig.brand.location}</p>
+              </div>
             </div>
           </div>
-        </Container>
-      </div>
-    </header>
+        </div>
+      )}
+    </>
   )
 }
