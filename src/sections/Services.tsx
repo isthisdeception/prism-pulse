@@ -42,7 +42,7 @@ export function Services() {
               const whatsappMessage = encodeURIComponent(
                 `Hello Prism Pulse, I would like to discuss a project for ${service.title}.`
               )
-              const serviceWhatsappUrl = `${siteConfig.contact.whatsappUrl}?text=${whatsappMessage}`
+              const serviceWhatsappUrl = `${siteConfig.contact.socials.whatsapp}?text=${whatsappMessage}`
 
               return (
                 <article
@@ -177,7 +177,7 @@ export function Services() {
                 </div>
 
                 <a
-                  href={`${siteConfig.contact.whatsappUrl}?text=${encodeURIComponent(
+                  href={`${siteConfig.contact.socials.whatsapp}?text=${encodeURIComponent(
                     `Hello Prism Pulse, I'm interested in discussing a project for ${activeService.title}.`
                   )}`}
                   target="_blank"

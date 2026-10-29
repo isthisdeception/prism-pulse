@@ -93,14 +93,14 @@ export const siteConfig: SiteConfig = {
   },
   contact: {
     // === REPLACE THESE VALUES WITH YOUR REAL CONTACT DETAILS ===
-    whatsappNumber: 'TODO_REPLACE_PHONE_NUMBER', // Example: '+8801XXXXXXXXX'
-    whatsappUrl: 'https://wa.me/TODO_REPLACE_WITH_NUMBER?text=Hello%20Prism%20Pulse,%20I%20would%20like%20to%20discuss%20a%20project',
+    whatsappNumber: '+8801313323612',
+    whatsappUrl: 'https://wa.me/8801313323612?text=Hello%20Prism%20Pulse,%20I%20would%20like%20to%20discuss%20a%20project',
     email: 'contact@TODO_REPLACE_DOMAIN.com',
-    phoneDisplay: '+880 1XXX-XXXXXX (TODO_REPLACE)',
+    phoneDisplay: '+880 1313-323612',
     locationDisplay: 'Available All Over Bangladesh · Based in Dhaka (TODO_REPLACE)',
 
     socials: {
-      whatsapp: 'https://wa.me/TODO_REPLACE_WITH_NUMBER',
+      whatsapp: 'https://wa.me/8801313323612',
       instagram: 'https://instagram.com/TODO_REPLACE_HANDLE',
       facebook: 'https://facebook.com/TODO_REPLACE_PAGE',
       youtube: 'https://youtube.com/@TODO_REPLACE_CHANNEL',

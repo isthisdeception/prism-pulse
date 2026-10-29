@@ -82,7 +82,7 @@ export function Contact() {
               </div>
 
               {/* Primary WhatsApp Action */}
-              <div className="shrink-0 w-full sm:w-auto">
+              <div className="shrink-0 w-full sm:w-auto flex flex-col items-center sm:items-end gap-2">
                 <Button
                   as="a"
                   href={contact.whatsappUrl}
@@ -96,6 +96,9 @@ export function Contact() {
                   <span>Chat on WhatsApp</span>
                   <ArrowRight className="w-4 h-4" />
                 </Button>
+                <span className="text-xs font-mono text-[#9fa2b4] tracking-wide">
+                  {contact.phoneDisplay}
+                </span>
               </div>
             </div>
           </div>
