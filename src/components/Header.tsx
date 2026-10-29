@@ -3,6 +3,7 @@ import { Container } from './Container'
 import { Button } from './Button'
 import { siteConfig } from '../data/siteConfig'
 import { Menu, X, MessageCircle } from 'lucide-react'
+import brandLogo from '../assets/Prism-Pluse.png'
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -56,8 +57,14 @@ export function Header() {
             className="group flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-sm"
             aria-label={`${siteConfig.brand.name} Home`}
           >
-            <div className="w-8 h-8 rounded bg-[#181a24] border border-amber-400/40 flex items-center justify-center font-bold text-amber-400 text-xs tracking-wider transition-colors duration-200 group-hover:border-amber-400 group-hover:bg-amber-400/10">
-              PP
+            <div className="w-9 h-9 rounded-lg bg-white/95 p-1 flex items-center justify-center shadow-md shadow-amber-400/10 border border-white/20 transition-transform duration-200 group-hover:scale-105 shrink-0 overflow-hidden">
+              <img
+                src={brandLogo}
+                alt={`${siteConfig.brand.name} Logo`}
+                width={36}
+                height={36}
+                className="w-full h-full object-contain"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-semibold tracking-[0.22em] text-sm sm:text-base uppercase text-[#f3f3f6] transition-colors duration-200 group-hover:text-amber-300">
@@ -130,8 +137,14 @@ export function Header() {
               className="flex items-center gap-3"
               aria-label={`${siteConfig.brand.name} Home`}
             >
-              <div className="w-8 h-8 rounded bg-[#181a24] border border-amber-400/40 flex items-center justify-center font-bold text-amber-400 text-xs tracking-wider">
-                PP
+              <div className="w-9 h-9 rounded-lg bg-white/95 p-1 flex items-center justify-center shadow-md shadow-amber-400/10 border border-white/20 shrink-0 overflow-hidden">
+                <img
+                  src={brandLogo}
+                  alt={`${siteConfig.brand.name} Logo`}
+                  width={36}
+                  height={36}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="font-semibold tracking-[0.22em] text-sm uppercase text-[#f3f3f6]">
                 {siteConfig.brand.name}

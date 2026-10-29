@@ -8,6 +8,7 @@ import { Contact } from './sections/Contact'
 import { WhatsAppPopup } from './components/WhatsAppPopup'
 import { Container } from './components/Container'
 import { siteConfig } from './data/siteConfig'
+import brandLogo from './assets/Prism-Pluse.png'
 
 const CURRENT_YEAR = new Date().getFullYear()
 
@@ -51,8 +52,17 @@ export default function App() {
       <WhatsAppPopup />
 
       {/* Global Minimal Footer */}
-      <footer className="border-t border-[#222533] py-8 text-center text-xs text-[#676b7e] bg-[#090a0f]">
-        <Container>
+      <footer className="border-t border-[#222533] py-10 text-center text-xs text-[#676b7e] bg-[#090a0f]">
+        <Container className="flex flex-col items-center gap-3">
+          <div className="w-8 h-8 rounded-lg bg-white/95 p-1 flex items-center justify-center shadow-sm border border-white/20 shrink-0 overflow-hidden">
+            <img
+              src={brandLogo}
+              alt={`${siteConfig.brand.name} Logo`}
+              width={32}
+              height={32}
+              className="w-full h-full object-contain"
+            />
+          </div>
           <p>© {CURRENT_YEAR} {siteConfig.brand.name}. {siteConfig.brand.location}.</p>
         </Container>
       </footer>
