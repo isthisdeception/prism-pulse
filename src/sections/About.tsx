@@ -1,6 +1,6 @@
 import { Container } from '../components/Container'
 import { siteConfig } from '../data/siteConfig'
-import { User, MapPin, Compass } from 'lucide-react'
+import { User, MapPin } from 'lucide-react'
 
 export function About() {
   const { brand } = siteConfig
@@ -39,15 +39,6 @@ export function About() {
                   <span className="font-mono text-[11px]">{brand.location}</span>
                 </div>
               </div>
-            </div>
-
-            {/* Quick Technical Credential Badge */}
-            <div className="mt-4 w-full max-w-md mx-auto lg:max-w-none p-3.5 rounded-xl bg-[#12131a] border border-[#222533] flex items-center justify-between text-xs text-[#9fa2b4]">
-              <div className="flex items-center gap-2">
-                <Compass className="w-4 h-4 text-amber-400" />
-                <span>FAA Part 107 Commercial Drone Pilot</span>
-              </div>
-              <span className="text-emerald-400 font-mono text-[11px] font-medium">Certified</span>
             </div>
           </div>
 

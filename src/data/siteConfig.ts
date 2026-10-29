@@ -82,11 +82,6 @@ export const siteConfig: SiteConfig = {
         number: '02',
         title: 'Cinematic Color Grading',
         description: 'Color science engineered per project, balancing film-stock warmth with modern dynamic range and accurate skin tones.'
-      },
-      {
-        number: '03',
-        title: 'Agile & Drone-Certified',
-        description: 'Certified for safe, legal, and rapid aerial deployment from scenic remote spots to urban production sets.'
       }
     ]
   },
