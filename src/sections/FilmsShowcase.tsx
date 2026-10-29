@@ -198,21 +198,13 @@ export function FilmsShowcase() {
                 {/* Card Meta Content */}
                 <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between bg-[#12131a]">
                   <div>
-                    {film.role && (
-                      <span className="text-[11px] uppercase tracking-wider text-amber-400/90 font-mono block mb-1">
-                        {film.role}
-                      </span>
-                    )}
                     <h4 className="text-base font-medium text-[#f3f3f6] group-hover:text-amber-300 transition-colors duration-200">
                       {film.title}
                     </h4>
                   </div>
 
-
-
-                  <div className="pt-3 mt-3 border-t border-[#222533]/80 flex items-center justify-between text-[11px] text-[#676b7e]">
-                    <span>User-initiated 4K stream</span>
-                    <span className="text-amber-400/80 group-hover:text-amber-400 transition-colors">
+                  <div className="pt-3 mt-3 border-t border-[#222533]/80 flex items-center justify-end text-[11px]">
+                    <span className="text-amber-400/80 group-hover:text-amber-400 transition-colors font-medium">
                       Watch Film →
                     </span>
                   </div>
