@@ -162,15 +162,9 @@ export function ImageLightbox({
                 {project.year}
               </span>
             </div>
-            {project.clientOrContext && (
-              <p className="text-xs uppercase tracking-wider text-amber-400/90 mt-0.5">
-                {project.clientOrContext}
-              </p>
-            )}
-            <p className="text-xs sm:text-sm text-[#9fa2b4] mt-2 max-w-2xl leading-relaxed">
-              {project.description}
-            </p>
           </div>
+
+
 
           {project.videoUrl && onPlayVideo && (
             <button

@@ -177,15 +177,9 @@ export function SelectedWorks() {
                   <h3 className="text-base sm:text-lg font-medium text-[#f3f3f6] group-hover:text-amber-300 transition-colors duration-200">
                     {project.title}
                   </h3>
-                  {project.clientOrContext && (
-                    <p className="text-xs text-amber-400/80 font-mono mt-0.5 tracking-wide">
-                      {project.clientOrContext}
-                    </p>
-                  )}
-                  <p className="text-xs sm:text-sm text-[#9fa2b4] mt-2 line-clamp-2 leading-relaxed font-light">
-                    {project.description}
-                  </p>
                 </div>
+
+
 
                 <div className="pt-3 mt-3 border-t border-[#222533]/80 flex items-center justify-between text-[11px] text-[#676b7e]">
                   <span>Click to expand</span>

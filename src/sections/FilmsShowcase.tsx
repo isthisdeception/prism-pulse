@@ -118,10 +118,8 @@ export function FilmsShowcase() {
               <h3 className="text-xl sm:text-3xl font-medium text-[#f3f3f6] mt-1 group-hover:text-amber-200 transition-colors">
                 {SHOWREEL_PROJECT.title}
               </h3>
-              <p className="text-xs sm:text-sm text-[#9fa2b4] mt-2 line-clamp-2 leading-relaxed font-light hidden sm:block">
-                {SHOWREEL_PROJECT.description}
-              </p>
             </div>
+
           </div>
         </div>
 
@@ -208,15 +206,9 @@ export function FilmsShowcase() {
                     <h4 className="text-base font-medium text-[#f3f3f6] group-hover:text-amber-300 transition-colors duration-200">
                       {film.title}
                     </h4>
-                    {film.clientOrContext && (
-                      <p className="text-xs text-[#9fa2b4] mt-0.5">
-                        {film.clientOrContext}
-                      </p>
-                    )}
-                    <p className="text-xs text-[#676b7e] mt-2 line-clamp-2 leading-relaxed font-light">
-                      {film.description}
-                    </p>
                   </div>
+
+
 
                   <div className="pt-3 mt-3 border-t border-[#222533]/80 flex items-center justify-between text-[11px] text-[#676b7e]">
                     <span>User-initiated 4K stream</span>
