@@ -75,10 +75,13 @@ export function FilmsShowcase() {
             <img
               src={SHOWREEL_PROJECT.poster || SHOWREEL_PROJECT.image}
               alt={SHOWREEL_PROJECT.alt}
+              width={1920}
+              height={1080}
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover object-center filter brightness-[0.82] contrast-[1.05] transition-transform duration-700 ease-out group-hover:scale-[1.02]"
             />
+
 
             {/* Gradient Overlays for High Contrast Text */}
             <div
@@ -150,10 +153,13 @@ export function FilmsShowcase() {
                   <img
                     src={film.poster || film.image}
                     alt={film.alt}
+                    width={1280}
+                    height={720}
                     loading="lazy"
                     decoding="async"
                     className="w-full h-full object-cover object-center filter brightness-[0.88] contrast-[1.03] transition-transform duration-500 ease-out group-hover:scale-105"
                   />
+
 
                   {/* Dark Vignette Overlay */}
                   <div

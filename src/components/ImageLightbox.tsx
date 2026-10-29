@@ -108,7 +108,7 @@ export function ImageLightbox({
             ref={closeButtonRef}
             type="button"
             onClick={onClose}
-            className="p-1.5 rounded-lg text-[#9fa2b4] hover:text-white hover:bg-[#181a24] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+            className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2 rounded-lg text-[#9fa2b4] hover:text-white hover:bg-[#181a24] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
             aria-label="Close project preview"
           >
             <X className="w-5 h-5" />
@@ -120,6 +120,8 @@ export function ImageLightbox({
           <img
             src={project.image}
             alt={project.alt}
+            width={1600}
+            height={1200}
             className="max-h-[60vh] w-auto max-w-full object-contain select-none"
           />
 
@@ -128,7 +130,7 @@ export function ImageLightbox({
             <button
               type="button"
               onClick={handlePrev}
-              className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-[#090a0f]/80 hover:bg-[#181a24] text-[#f3f3f6] border border-[#2e3346] backdrop-blur-sm transition-transform hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+              className="min-w-[44px] min-h-[44px] flex items-center justify-center absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-[#090a0f]/80 hover:bg-[#181a24] text-[#f3f3f6] border border-[#2e3346] backdrop-blur-sm transition-transform hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
               aria-label="Previous project"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -140,12 +142,13 @@ export function ImageLightbox({
             <button
               type="button"
               onClick={handleNext}
-              className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-[#090a0f]/80 hover:bg-[#181a24] text-[#f3f3f6] border border-[#2e3346] backdrop-blur-sm transition-transform hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+              className="min-w-[44px] min-h-[44px] flex items-center justify-center absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-[#090a0f]/80 hover:bg-[#181a24] text-[#f3f3f6] border border-[#2e3346] backdrop-blur-sm transition-transform hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
               aria-label="Next project"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
           )}
+
         </div>
 
         {/* Bottom Details Footer */}

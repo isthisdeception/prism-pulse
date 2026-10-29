@@ -45,10 +45,13 @@ export function Services() {
                   <img
                     src={service.image}
                     alt={service.alt}
+                    width={1200}
+                    height={675}
                     loading="lazy"
                     decoding="async"
                     className="w-full h-full object-cover object-center filter brightness-[0.85] contrast-[1.05] transition-transform duration-500 group-hover:scale-105"
                   />
+
                   <div
                     className="absolute inset-0 bg-gradient-to-t from-[#12131a] via-[#12131a]/40 to-transparent"
                     aria-hidden="true"

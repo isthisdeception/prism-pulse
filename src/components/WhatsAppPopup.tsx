@@ -144,11 +144,12 @@ export function WhatsAppPopup({ isModalOpen = false }: WhatsAppPopupProps) {
           <button
             type="button"
             onClick={markDismissed}
-            className="p-1 rounded-md text-[#9fa2b4] hover:text-[#f3f3f6] hover:bg-[#181a24] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+            className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2 rounded-md text-[#9fa2b4] hover:text-[#f3f3f6] hover:bg-[#181a24] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
             aria-label="Dismiss consultation popup"
           >
             <X className="w-4 h-4" />
           </button>
+
         </div>
 
         {/* Body Text */}

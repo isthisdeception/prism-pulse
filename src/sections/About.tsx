@@ -20,10 +20,13 @@ export function About() {
               <img
                 src={brand.portraitImage}
                 alt={brand.portraitAlt}
+                width={800}
+                height={1000}
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover object-center filter brightness-[0.88] contrast-[1.05]"
               />
+
               <div
                 className="absolute inset-0 bg-gradient-to-t from-[#090a0f] via-transparent to-transparent opacity-80"
                 aria-hidden="true"

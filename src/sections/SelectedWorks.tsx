@@ -86,7 +86,7 @@ export function SelectedWorks() {
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => setActiveCategory(category)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide transition-all duration-200 shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 ${
+                className={`flex items-center gap-2 px-4 py-2.5 min-h-[44px] rounded-full text-xs sm:text-sm font-medium tracking-wide transition-all duration-200 shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 ${
                   isActive
                     ? 'bg-amber-400 text-neutral-950 font-semibold shadow-md shadow-amber-400/20'
                     : 'bg-[#12131a] text-[#9fa2b4] hover:text-[#f3f3f6] hover:bg-[#181a24] border border-[#222533]'
@@ -129,10 +129,13 @@ export function SelectedWorks() {
                 <img
                   src={project.image}
                   alt={project.alt}
+                  width={800}
+                  height={600}
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover object-center filter brightness-[0.92] contrast-[1.03] transition-transform duration-500 ease-out group-hover:scale-105"
                 />
+
 
                 {/* Dark Vignette Overlay */}
                 <div

@@ -98,11 +98,12 @@ export function VideoModal({
             ref={closeButtonRef}
             type="button"
             onClick={onClose}
-            className="p-1.5 rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+            className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2 rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
             aria-label="Close video player"
           >
             <X className="w-5 h-5" />
           </button>
+
         </div>
 
         {/* Video Player Container with 16:9 Aspect Ratio */}

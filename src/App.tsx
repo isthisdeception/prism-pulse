@@ -14,11 +14,20 @@ const CURRENT_YEAR = new Date().getFullYear()
 export default function App() {
   return (
     <div className="min-h-screen bg-[#090a0f] text-[#f3f3f6] flex flex-col selection:bg-amber-400/20 selection:text-amber-200">
+      {/* Accessible Skip Link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-amber-400 focus:text-neutral-950 focus:font-semibold focus:rounded focus:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
+      >
+        Skip to main content
+      </a>
+
       {/* Fixed Accessible Navigation Header */}
       <Header />
 
       {/* Main Content Area */}
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
+
         {/* Step 2: Cinematic Hero */}
         <Hero />
 

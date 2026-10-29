@@ -102,13 +102,14 @@ export function Header() {
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 rounded-md text-[#9fa2b4] hover:text-[#f3f3f6] hover:bg-[#181a24] border border-transparent hover:border-[#222533] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 transition-colors duration-200"
+          className="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center p-2 rounded-md text-[#9fa2b4] hover:text-[#f3f3f6] hover:bg-[#181a24] border border-transparent hover:border-[#222533] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 transition-colors duration-200"
           aria-expanded={mobileMenuOpen}
           aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
           aria-controls="mobile-menu"
         >
           {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
+
       </Container>
 
       {/* Mobile Drawer Menu */}
