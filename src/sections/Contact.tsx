@@ -8,7 +8,8 @@ import {
   MapPin,
   Video,
   ArrowRight,
-  Sparkles,
+  Send,
+  Globe,
   Clock
 } from 'lucide-react'
 
@@ -32,7 +33,7 @@ export function Contact() {
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#181a24] border border-[#2e3346] text-xs font-medium text-amber-400 mb-4">
-            <Sparkles className="w-3.5 h-3.5" />
+            <Send className="w-3.5 h-3.5" />
             <span className="tracking-wide uppercase text-[11px]">Direct Connection</span>
           </div>
 
@@ -149,7 +150,7 @@ export function Contact() {
           <div className="bg-[#12131a] border border-[#222533] rounded-xl p-5 flex flex-col justify-between">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-9 h-9 rounded-lg bg-[#181a24] border border-[#2e3346] flex items-center justify-center text-amber-400">
-                <Sparkles className="w-4 h-4" />
+                <Globe className="w-4 h-4" />
               </div>
               <div>
                 <span className="text-[11px] uppercase tracking-wider text-[#676b7e] font-mono block">

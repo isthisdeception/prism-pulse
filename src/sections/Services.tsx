@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Container } from '../components/Container'
 import { siteConfig } from '../data/siteConfig'
-import { Sparkles, MessageCircle, ArrowUpRight } from 'lucide-react'
+import { Sliders, MessageCircle, ArrowUpRight } from 'lucide-react'
 
 export function Services() {
   const [activeId, setActiveId] = useState<string>(siteConfig.services[0].id)
@@ -19,7 +19,7 @@ export function Services() {
         {/* Section Header */}
         <div className="max-w-2xl mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#181a24] border border-[#2e3346] text-xs font-medium text-amber-400 mb-4">
-            <Sparkles className="w-3.5 h-3.5" />
+            <Sliders className="w-3.5 h-3.5" />
             <span className="tracking-wide uppercase text-[11px]">Production Offerings</span>
           </div>
           <h2

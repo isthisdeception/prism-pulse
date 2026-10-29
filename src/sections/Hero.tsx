@@ -4,7 +4,7 @@ import { Button } from '../components/Button'
 import { VideoModal } from '../components/VideoModal'
 import { siteConfig } from '../data/siteConfig'
 import { SHOWREEL_PROJECT } from '../data/projects'
-import { Play, ArrowDown, Sparkles, Camera, Film, Compass } from 'lucide-react'
+import { Play, ArrowDown, Aperture, Camera, Film, Compass } from 'lucide-react'
 
 export function Hero() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
@@ -25,7 +25,7 @@ export function Hero() {
         {/* Editorial Eyebrow */}
         <div className="flex flex-col items-center text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#181a24] border border-[#2e3346] text-xs font-medium text-amber-400 mb-6 sm:mb-8 shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 shrink-0" />
+            <Aperture className="w-3.5 h-3.5 shrink-0" />
             <span className="tracking-wide uppercase text-[11px]">
               Cinematic Atelier · Aerial · Photography
             </span>

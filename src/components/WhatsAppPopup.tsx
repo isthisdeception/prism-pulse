@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { siteConfig } from '../data/siteConfig'
-import { MessageCircle, X, Sparkles } from 'lucide-react'
+import { MessageCircle, X } from 'lucide-react'
 
 // Configuration constants for timing and storage
 const POPUP_DELAY_MS = 7000 // 7 seconds after page load
@@ -130,8 +130,8 @@ export function WhatsAppPopup({ isModalOpen = false }: WhatsAppPopupProps) {
               <MessageCircle className="w-5 h-5 fill-current" />
             </div>
             <div>
-              <span className="text-xs uppercase tracking-wider text-amber-300 font-mono flex items-center gap-1 font-semibold">
-                <Sparkles className="w-3 h-3" />
+              <span className="text-xs uppercase tracking-wider text-amber-300 font-mono flex items-center gap-1.5 font-semibold">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
                 Direct Inquiry
               </span>
               <h3 className="text-sm font-semibold text-[#f3f3f6]">
