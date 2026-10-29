@@ -1,3 +1,5 @@
 export { Hero } from './Hero'
 export { SelectedWorks } from './SelectedWorks'
 export { FilmsShowcase } from './FilmsShowcase'
+export { Services } from './Services'
+export { About } from './About'

@@ -2,6 +2,8 @@ import { Header } from './components/Header'
 import { Hero } from './sections/Hero'
 import { SelectedWorks } from './sections/SelectedWorks'
 import { FilmsShowcase } from './sections/FilmsShowcase'
+import { Services } from './sections/Services'
+import { About } from './sections/About'
 import { Container } from './components/Container'
 import { siteConfig } from './data/siteConfig'
 
@@ -24,40 +26,12 @@ export default function App() {
         {/* Step 4: Films, Cinematography & Drone Showcase */}
         <FilmsShowcase />
 
+        {/* Step 5: Disciplines & Services */}
+        <Services />
 
-        <section
-          id="services"
-          className="scroll-mt-24 py-16 border-b border-[#222533]/50 text-center"
-        >
-          <Container size="narrow">
-            <span className="text-xs uppercase tracking-widest text-amber-400 font-medium">
-              Offerings
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-light text-[#f3f3f6] mt-2 mb-3">
-              Services & Production
-            </h2>
-            <p className="text-sm text-[#9fa2b4] max-w-md mx-auto">
-              Ready for Step 5: Service cards, deliverables, and capabilities.
-            </p>
-          </Container>
-        </section>
+        {/* Step 5: About the Creator & Vision */}
+        <About />
 
-        <section
-          id="about"
-          className="scroll-mt-24 py-16 border-b border-[#222533]/50 text-center"
-        >
-          <Container size="narrow">
-            <span className="text-xs uppercase tracking-widest text-amber-400 font-medium">
-              Vision
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-light text-[#f3f3f6] mt-2 mb-3">
-              About the Creator
-            </h2>
-            <p className="text-sm text-[#9fa2b4] max-w-md mx-auto">
-              Ready for Step 6: Creative statement and artistic background.
-            </p>
-          </Container>
-        </section>
 
         <section
           id="contact"
