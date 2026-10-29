@@ -1,10 +1,10 @@
 import { Container } from '../components/Container'
-import { Button } from '../components/Button'
 import { siteConfig } from '../data/siteConfig'
-import { User, MapPin, Compass, MessageCircle, ArrowRight } from 'lucide-react'
+import { User, MapPin, Compass } from 'lucide-react'
 
 export function About() {
-  const { brand, contact } = siteConfig
+  const { brand } = siteConfig
+
 
   return (
     <section
@@ -100,34 +100,11 @@ export function About() {
                 ))}
               </div>
             </div>
-
-            {/* Direct Connect Action */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-6 border-t border-[#222533]">
-              <Button
-                as="a"
-                href={contact.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="primary"
-                size="md"
-              >
-                <MessageCircle className="w-4 h-4" />
-                <span>Discuss a Commission on WhatsApp</span>
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-
-              <Button
-                as="a"
-                href="#contact"
-                variant="secondary"
-                size="md"
-              >
-                <span>View Full Contact Channels</span>
-              </Button>
-            </div>
           </div>
+
         </div>
       </Container>
+
     </section>
   )
 }
