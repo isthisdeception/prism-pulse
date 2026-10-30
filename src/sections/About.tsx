@@ -14,10 +14,10 @@ export function About() {
       aria-labelledby="about-heading"
     >
       <Container>
-        <div className="relative max-w-5xl mx-auto rounded-3xl bg-gradient-to-br from-[#13151f]/90 via-[#0e1017]/90 to-[#090a0f] border border-white/10 p-6 sm:p-10 md:p-14 overflow-hidden shadow-2xl">
-          {/* Giant Subtle Background Watermark */}
+        <div className="relative max-w-5xl mx-auto rounded-3xl bg-gradient-to-br from-[#13151f]/90 via-[#0e1017]/90 to-[#090a0f] border border-white/10 pt-6 px-6 pb-16 sm:p-10 md:p-14 overflow-hidden shadow-2xl">
+          {/* Giant Subtle Background Watermark (Fully visible on mobile & desktop) */}
           <span
-            className="pointer-events-none select-none absolute -bottom-8 -right-4 text-[90px] sm:text-[150px] lg:text-[190px] font-serif italic font-normal leading-none text-white/[0.03] tracking-tight"
+            className="pointer-events-none select-none absolute bottom-1 right-3 sm:-bottom-6 sm:-right-3 text-[72px] sm:text-[150px] lg:text-[190px] font-serif italic font-normal leading-none text-white/[0.08] sm:text-white/[0.05] tracking-tight"
             aria-hidden="true"
           >
             Mubarak
