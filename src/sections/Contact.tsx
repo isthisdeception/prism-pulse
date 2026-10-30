@@ -40,7 +40,10 @@ export function Contact() {
             id="contact-heading"
             className="text-3xl sm:text-5xl font-light tracking-tight text-[#f3f3f6] mb-4"
           >
-            Let's create something <span className="font-semibold text-amber-300">enduring.</span>
+            Let's create something{' '}
+            <span className="font-serif italic font-normal text-amber-300">
+              enduring.
+            </span>
           </h2>
 
           <p className="text-sm sm:text-base text-[#9fa2b4] font-light leading-relaxed max-w-xl mx-auto">

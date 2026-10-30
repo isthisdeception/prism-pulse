@@ -14,7 +14,10 @@ const CURRENT_YEAR = new Date().getFullYear()
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#090a0f] text-[#f3f3f6] flex flex-col selection:bg-amber-400/20 selection:text-amber-200">
+    <div className="min-h-screen bg-[#090a0f] text-[#f3f3f6] flex flex-col selection:bg-amber-400/20 selection:text-amber-200 relative">
+      {/* Subtle 35mm Cinema Grain Overlay */}
+      <div className="pointer-events-none fixed inset-0 z-30 cinema-grain" aria-hidden="true" />
+
       {/* Accessible Skip Link */}
       <a
         href="#main-content"

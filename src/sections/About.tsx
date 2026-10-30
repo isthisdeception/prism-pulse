@@ -54,7 +54,10 @@ export function About() {
               id="about-heading"
               className="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-[#f3f3f6] mb-6 leading-tight"
             >
-              Stories told through <span className="font-semibold text-amber-300">deliberate light.</span>
+              Stories told through{' '}
+              <span className="font-serif italic font-normal text-amber-300">
+                deliberate light.
+              </span>
             </h2>
 
             {/* Bio paragraphs */}

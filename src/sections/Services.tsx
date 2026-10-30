@@ -26,7 +26,10 @@ export function Services() {
             id="services-heading"
             className="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-[#f3f3f6]"
           >
-            Disciplines & <span className="font-semibold text-amber-300">Capabilities</span>
+            Disciplines &{' '}
+            <span className="font-serif italic font-normal text-amber-300">
+              Capabilities.
+            </span>
           </h2>
           <p className="text-sm sm:text-base text-[#9fa2b4] mt-3 font-light leading-relaxed">
             Tailored visual production across cinema, editorial portraiture, and licensed aerial perspective. Every commission is engineered for precision, pacing, and authentic atmosphere.
@@ -149,7 +152,7 @@ export function Services() {
                 alt={activeService.alt}
                 width={1200}
                 height={900}
-                className="w-full h-full object-cover object-center filter brightness-[0.82] contrast-[1.05] transition-all duration-500 animate-in fade-in zoom-in-95"
+                className="w-full h-full object-cover object-center filter brightness-[0.95] contrast-[1.03] transition-all duration-500 animate-in fade-in zoom-in-95"
               />
 
               {/* Cinematic Vignette Overlay */}
