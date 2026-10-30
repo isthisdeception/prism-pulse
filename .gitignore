@@ -23,7 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-# Build & planning documents
-PRISM_PULSE_ANTIGRAVITY_PLAN.md
-*plan*.md
-*PLAN*.md
+# Environment variables
+.env
+.env.*
+!.env.example

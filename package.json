@@ -1,7 +1,10 @@
 {
   "name": "prism-pulse",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Prism Pulse — Cinematography, Fine-Art Photography & Licensed Aerial Visuals Studio based in Dhaka, Bangladesh.",
+  "author": "Mubarak — Prism Pulse",
+  "homepage": "https://prism-pulse.pages.dev",
   "type": "module",
   "scripts": {
     "dev": "vite",
