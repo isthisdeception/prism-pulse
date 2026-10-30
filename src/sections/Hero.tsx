@@ -75,8 +75,20 @@ export function Hero() {
         {/* Stable Cinematic Hero Image Frame */}
         <div className="relative group max-w-6xl mx-auto">
           {/* Outer glow & subtle border container */}
-          <div className="relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[21/9] w-full rounded-xl sm:rounded-2xl overflow-hidden border border-[#2e3346] bg-[#12131a] shadow-2xl">
-            {/* Stable Aspect ratio background image with preload hints */}
+          <div
+            onClick={() => setIsVideoModalOpen(true)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                setIsVideoModalOpen(true)
+              }
+            }}
+            role="button"
+            tabIndex={0}
+            aria-label="Play video"
+            className="relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[21/9] w-full rounded-xl sm:rounded-2xl overflow-hidden border border-[#2e3346] hover:border-amber-400/50 bg-[#12131a] shadow-2xl cursor-pointer transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+          >
+            {/* Stable Aspect ratio background image with natural brightness */}
             <img
               src={SHOWREEL_PROJECT.image}
               alt={SHOWREEL_PROJECT.alt}
@@ -84,49 +96,27 @@ export function Hero() {
               height={1080}
               fetchPriority="high"
               decoding="async"
-              className="w-full h-full object-cover object-center filter brightness-[0.88] contrast-[1.05] transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+              className="w-full h-full object-cover object-center filter brightness-[0.98] contrast-[1.03] transition-transform duration-700 ease-out group-hover:scale-[1.02]"
             />
 
-            {/* Cinematic Gradient Overlays */}
+            {/* Subtle bottom vignette only to blend frame edge */}
             <div
-              className="absolute inset-0 bg-gradient-to-t from-[#090a0f] via-[#090a0f]/30 to-transparent opacity-90"
-              aria-hidden="true"
-            />
-            <div
-              className="absolute inset-0 bg-gradient-to-r from-[#090a0f]/70 via-transparent to-[#090a0f]/40"
+              className="absolute inset-0 bg-gradient-to-t from-[#090a0f]/55 via-transparent to-transparent pointer-events-none"
               aria-hidden="true"
             />
 
-            {/* Click-to-play Showreel Floating Trigger in center */}
-            <div className="absolute inset-0 flex items-center justify-center p-4">
-              <button
-                type="button"
-                onClick={() => setIsVideoModalOpen(true)}
-                className="group/btn relative flex items-center gap-3 px-5 py-3 rounded-full bg-[#090a0f]/80 hover:bg-[#12131a] border border-[#2e3346] hover:border-amber-400/60 backdrop-blur-md text-[#f3f3f6] shadow-xl transition-all duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
-                aria-label="Play 2025 Showreel"
-              >
-                <div className="w-8 h-8 rounded-full bg-amber-400 text-neutral-950 flex items-center justify-center font-bold shadow-md">
-                  <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
+            {/* Minimal Circular Glass & Gold Play Trigger */}
+            <div className="absolute inset-0 flex items-center justify-center p-4 pointer-events-none">
+              <div className="relative flex items-center justify-center">
+                {/* Ambient pulsing ring */}
+                <span
+                  className="absolute w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-amber-400/20 animate-ping [animation-duration:2.5s]"
+                  aria-hidden="true"
+                />
+                {/* Frosted glass circle that turns solid gold on hover */}
+                <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#090a0f]/65 group-hover:bg-amber-400 text-amber-300 group-hover:text-neutral-950 border border-amber-400/50 backdrop-blur-md flex items-center justify-center shadow-2xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-amber-400/30">
+                  <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" />
                 </div>
-                <div className="text-left">
-                  <span className="block text-xs font-semibold tracking-wider uppercase text-amber-300">
-                    Play Showreel
-                  </span>
-                  <span className="block text-[11px] text-[#9fa2b4]">
-                    2025 Director's Cut · 4K
-                  </span>
-                </div>
-              </button>
-            </div>
-
-            {/* Bottom metadata tags inside frame */}
-            <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex flex-wrap items-center justify-between gap-3 text-xs text-[#9fa2b4] pointer-events-none">
-              <div className="flex items-center gap-2 px-2.5 py-1 rounded bg-[#090a0f]/80 backdrop-blur-sm border border-[#222533]">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Available for Q2/Q3 Commissions</span>
-              </div>
-              <div className="hidden sm:flex items-center gap-2 px-2.5 py-1 rounded bg-[#090a0f]/80 backdrop-blur-sm border border-[#222533] text-[11px]">
-                <span>Color Grade: Custom Film Emulation</span>
               </div>
             </div>
           </div>

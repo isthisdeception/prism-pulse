@@ -202,7 +202,7 @@ export const PROJECTS: Project[] = [
  */
 export const SHOWREEL_PROJECT: Project = {
   id: 'prism-pulse-showreel',
-  title: 'Prism Pulse Showreel 2025',
+  title: 'Prism Pulse',
   category: 'Films',
   year: '2025',
   clientOrContext: 'Cinematography & Visual Direction Reel',
