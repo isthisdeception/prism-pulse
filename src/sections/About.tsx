@@ -1,6 +1,6 @@
 import { Container } from '../components/Container'
 import { siteConfig } from '../data/siteConfig'
-import actionImg from '../assets/hero-thum.jpg'
+const actionImg = 'https://res.cloudinary.com/npp4zjhc/image/upload/f_auto,q_auto/v1793378458/prism-pulse/hero-thum.jpg'
 import { InstagramIcon, FacebookIcon, YouTubeIcon } from '../components/SocialIcons'
 import { ArrowUpRight } from 'lucide-react'
 

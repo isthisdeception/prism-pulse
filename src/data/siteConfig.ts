@@ -4,11 +4,11 @@
  * Placeholders are marked with `TODO_REPLACE` so the owner can easily update them.
  */
 
-import portraitImg from '../assets/mubarak-photo.jpg'
-import serviceCinemaImg from '../assets/gallery/photo-21.jpg'
-import servicePortraitImg from '../assets/gallery/photo-14.jpg'
-import serviceDroneImg from '../assets/gallery/photo-08.jpg'
-import serviceCommercialImg from '../assets/gallery/photo-20.jpg'
+const portraitImg = 'https://res.cloudinary.com/npp4zjhc/image/upload/f_auto,q_auto/v1793378460/prism-pulse/mubarak-photo.jpg'
+const serviceCinemaImg = 'https://res.cloudinary.com/npp4zjhc/image/upload/f_auto,q_auto/v1793378508/prism-pulse/photo-21.jpg'
+const servicePortraitImg = 'https://res.cloudinary.com/npp4zjhc/image/upload/f_auto,q_auto/v1793378492/prism-pulse/photo-14.jpg'
+const serviceDroneImg = 'https://res.cloudinary.com/npp4zjhc/image/upload/f_auto,q_auto/v1793378479/prism-pulse/photo-08.jpg'
+const serviceCommercialImg = 'https://res.cloudinary.com/npp4zjhc/image/upload/f_auto,q_auto/v1793378506/prism-pulse/photo-20.jpg'
 
 
 export interface NavItem {

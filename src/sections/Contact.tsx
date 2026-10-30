@@ -2,7 +2,7 @@ import { useState, useRef } from 'react'
 import { Container } from '../components/Container'
 import { siteConfig } from '../data/siteConfig'
 import { InstagramIcon, FacebookIcon, YouTubeIcon } from '../components/SocialIcons'
-import backdropImg from '../assets/gallery/photo-08.jpg'
+const backdropImg = 'https://res.cloudinary.com/npp4zjhc/image/upload/f_auto,q_auto/v1793378479/prism-pulse/photo-08.jpg'
 import { MessageCircle, Mail, ArrowUpRight, ArrowUp, Check, Copy } from 'lucide-react'
 
 const CURRENT_YEAR = new Date().getFullYear()
@@ -10,16 +10,14 @@ const CURRENT_YEAR = new Date().getFullYear()
 export function Contact() {
   const { contact, brand } = siteConfig
   const [copied, setCopied] = useState(false)
-  const [spot, setSpot] = useState({ x: 70, y: 30 })
   const cardRef = useRef<HTMLDivElement>(null)
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return
-    const rect = cardRef.current.getBoundingClientRect()
-    setSpot({
-      x: Math.round(((e.clientX - rect.left) / rect.width) * 100),
-      y: Math.round(((e.clientY - rect.top) / rect.height) * 100)
-    })
+    const el = cardRef.current
+    if (!el) return
+    const rect = el.getBoundingClientRect()
+    el.style.setProperty('--spot-x', `${Math.round(((e.clientX - rect.left) / rect.width) * 100)}%`)
+    el.style.setProperty('--spot-y', `${Math.round(((e.clientY - rect.top) / rect.height) * 100)}%`)
   }
 
   const handleCopyEmail = (e: React.MouseEvent) => {
@@ -68,7 +66,8 @@ export function Contact() {
           {/* Interactive Cursor-Tracking Warm Gold Spotlight */}
           <div
             style={{
-              background: `radial-gradient(650px circle at ${spot.x}% ${spot.y}%, rgba(229, 169, 93, 0.16), transparent 60%)`
+              background:
+                'radial-gradient(650px circle at var(--spot-x, 70%) var(--spot-y, 30%), rgba(229, 169, 93, 0.16), transparent 60%)'
             }}
             className="pointer-events-none absolute inset-0 transition-opacity duration-300"
             aria-hidden="true"
