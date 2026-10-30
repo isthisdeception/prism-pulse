@@ -10,6 +10,7 @@
  */
 
 export type ProjectCategory = 'Photography' | 'Films' | 'Drone' | 'Commercial'
+import showreelThumb from '../assets/hero-thum.jpg'
 
 export interface Project {
   id: string
@@ -206,10 +207,10 @@ export const SHOWREEL_PROJECT: Project = {
   year: '2025',
   clientOrContext: 'Cinematography & Visual Direction Reel',
   description: 'A curated two-minute reel encapsulating narrative cinematography, commercial work, and aerial perspectives.',
-  image: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1920&q=85',
-  poster: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1920&q=85',
+  image: showreelThumb,
+  poster: showreelThumb,
   alt: 'Cinematographer holding camera rig framed against golden hour mountain horizon',
-  videoUrl: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ', // TODO_REPLACE
+  videoUrl: 'https://www.youtube-nocookie.com/embed/wi3-iiwBn1c', // TODO_REPLACE
   featured: true,
   aspectRatio: 'landscape',
   duration: '02:00',
