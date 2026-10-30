@@ -135,19 +135,19 @@ export function FilmsShowcase() {
                   className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                 />
 
-                {/* Clean Bottom Gradient Overlay */}
+                {/* Hover-Only Gradient Overlay */}
                 <div
-                  className="absolute inset-0 bg-gradient-to-t from-[#090a0f]/90 via-[#090a0f]/20 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-300"
+                  className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/30 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300 pointer-events-none"
                   aria-hidden="true"
                 />
 
-                {/* Top Category & Duration Pills */}
-                <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-                  <span className="text-[10px] font-medium uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-[#090a0f]/75 text-amber-300 border border-white/10 backdrop-blur-md">
+                {/* Hover-Only Top Category & Duration Pills */}
+                <div className="absolute top-3 left-3 right-3 flex items-center justify-between opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 group-focus-visible:opacity-100 group-focus-visible:translate-y-0 transition-all duration-300 pointer-events-none">
+                  <span className="text-[10px] font-medium uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-black/70 text-amber-300 border border-white/15 backdrop-blur-md">
                     {film.category}
                   </span>
                   {film.duration && (
-                    <span className="text-[10px] font-mono text-[#f3f3f6] px-2 py-0.5 rounded-full bg-[#090a0f]/75 border border-white/10 backdrop-blur-md flex items-center gap-1">
+                    <span className="text-[10px] font-mono text-[#f3f3f6] px-2 py-0.5 rounded-full bg-black/70 border border-white/15 backdrop-blur-md flex items-center gap-1">
                       <Clock className="w-2.5 h-2.5 text-amber-400" />
                       {film.duration}
                     </span>
@@ -156,19 +156,19 @@ export function FilmsShowcase() {
 
                 {/* Center Glass Play Button Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <div className="w-12 h-12 rounded-full bg-[#090a0f]/70 text-amber-300 border border-amber-400/40 backdrop-blur-md flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:bg-amber-400 group-hover:text-neutral-950">
+                  <div className="w-11 h-11 rounded-full bg-black/60 text-amber-300 border border-amber-400/40 backdrop-blur-md flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:bg-amber-400 group-hover:text-neutral-950">
                     <Play className="w-4 h-4 fill-current ml-0.5" />
                   </div>
                 </div>
 
-                {/* Overlaid Film Title at Bottom */}
-                <div className="absolute bottom-0 inset-x-0 p-4 sm:p-5 pointer-events-none">
+                {/* Hover-Only Film Title at Bottom */}
+                <div className="absolute bottom-0 inset-x-0 p-4 sm:p-5 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 group-focus-visible:opacity-100 group-focus-visible:translate-y-0 transition-all duration-300 pointer-events-none">
                   {film.clientOrContext && (
-                    <span className="block text-[10px] font-mono uppercase tracking-wider text-amber-300/80 mb-0.5">
+                    <span className="block text-[10px] font-mono uppercase tracking-wider text-amber-300/90 mb-0.5">
                       {film.clientOrContext}
                     </span>
                   )}
-                  <h4 className="text-base sm:text-lg font-medium text-[#f3f3f6] group-hover:text-amber-200 transition-colors duration-200 leading-snug">
+                  <h4 className="text-base sm:text-lg font-medium text-white leading-snug">
                     {film.title}
                   </h4>
                 </div>
