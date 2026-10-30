@@ -5,6 +5,10 @@
  */
 
 import portraitImg from '../assets/mubarak-photo.jpg'
+import serviceCinemaImg from '../assets/gallery/photo-21.jpg'
+import servicePortraitImg from '../assets/gallery/photo-14.jpg'
+import serviceDroneImg from '../assets/gallery/photo-08.jpg'
+import serviceCommercialImg from '../assets/gallery/photo-20.jpg'
 
 
 export interface NavItem {
@@ -117,8 +121,8 @@ export const siteConfig: SiteConfig = {
       tagline: 'Motion pictures with depth and deliberate rhythm.',
       description: 'Direction, camera operation, and color grading for brand films, mini-docs, music visualizers, and narrative commercials.',
       deliverables: ['4K Masters & Social Cuts', 'Director Color Grade', 'Original Sound Design & Mix'],
-      image: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Cinematographer operating cinema camera rig during golden hour'
+      image: serviceCinemaImg,
+      alt: 'Dynamic cultural cinematography capturing traditional Dhak drummers'
     },
     {
       id: 'photography',
@@ -126,8 +130,8 @@ export const siteConfig: SiteConfig = {
       tagline: 'Sculpted with natural light and distinct atmosphere.',
       description: 'Striking visual campaigns, commercial lookbooks, environmental portraits, and architectural compositions.',
       deliverables: ['High-Resolution Retouched Plates', 'Print & Commercial Web Licensing', 'Custom Color Tones'],
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80',
-      alt: 'High-fashion editorial portrait with dramatic side lighting'
+      image: servicePortraitImg,
+      alt: 'Environmental portrait of a smiling farmer carrying golden harvested paddy'
     },
     {
       id: 'drone',
@@ -135,8 +139,8 @@ export const siteConfig: SiteConfig = {
       tagline: 'Expansive perspectives from vantage points previously unreachable.',
       description: 'Licensed aerial footage and high-resolution overhead photography for luxury real estate, tourism, and cinematic sequences.',
       deliverables: ['ProRes / D-Log Drone Capture', 'Dynamic FPV & Smooth Orbit Tracks', 'Geographical Clearance Compliance'],
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Aerial bird-eye view of turquoise ocean shoreline'
+      image: serviceDroneImg,
+      alt: 'Top-down aerial drone view of wooden boats arranged in a radial pattern'
     },
     {
       id: 'commercial',
@@ -144,8 +148,8 @@ export const siteConfig: SiteConfig = {
       tagline: 'Visual identities brought alive through kinetic framing.',
       description: 'End-to-end production for brands seeking to captivate discerning audiences through bespoke visual storytelling.',
       deliverables: ['Campaign Strategy & Moodboard', 'Full Production Delivery', 'Multi-Platform Aspect Deliverables'],
-      image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Cinematic commercial shoot with rain and dynamic lighting'
+      image: serviceCommercialImg,
+      alt: 'High-contrast industrial frame against a bold orange ship hull'
     }
   ]
 }
