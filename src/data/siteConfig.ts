@@ -5,7 +5,7 @@
  */
 
 const portraitImg = 'https://res.cloudinary.com/npp4zjhc/image/upload/f_auto,q_auto/v1793378460/prism-pulse/mubarak-photo.jpg'
-const serviceCinemaImg = 'https://res.cloudinary.com/npp4zjhc/image/upload/f_auto,q_auto/v1793378508/prism-pulse/photo-21.jpg'
+const serviceCinemaImg = 'https://res.cloudinary.com/npp4zjhc/image/upload/f_auto,q_auto/v1793378511/prism-pulse/photo-22.jpg'
 const servicePortraitImg = 'https://res.cloudinary.com/npp4zjhc/image/upload/f_auto,q_auto/v1793378492/prism-pulse/photo-14.jpg'
 const serviceDroneImg = 'https://res.cloudinary.com/npp4zjhc/image/upload/f_auto,q_auto/v1793378479/prism-pulse/photo-08.jpg'
 const serviceCommercialImg = 'https://res.cloudinary.com/npp4zjhc/image/upload/f_auto,q_auto/v1793378506/prism-pulse/photo-20.jpg'
@@ -122,7 +122,7 @@ export const siteConfig: SiteConfig = {
       description: 'Direction, camera operation, and color grading for brand films, mini-docs, music visualizers, and narrative commercials.',
       deliverables: ['4K Masters & Social Cuts', 'Director Color Grade', 'Original Sound Design & Mix'],
       image: serviceCinemaImg,
-      alt: 'Dynamic cultural cinematography capturing traditional Dhak drummers'
+      alt: 'Cinematic rural storytelling frame along a lush green riverbank'
     },
     {
       id: 'photography',
