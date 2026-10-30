@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prism-pulse.pages.dev/sitemap.xml
+
