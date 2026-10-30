@@ -30,6 +30,10 @@ export function SelectedWorks() {
   }, [])
 
   const handleOpenProject = (project: Project) => {
+    if (project.videoUrl) {
+      setActiveVideoProject(project)
+      return
+    }
     setSelectedProject(project)
     setIsLightboxOpen(true)
   }
@@ -182,9 +186,9 @@ export function SelectedWorks() {
 
 
                 <div className="pt-3 mt-3 border-t border-[#222533]/80 flex items-center justify-between text-[11px] text-[#676b7e]">
-                  <span>Click to expand</span>
+                  <span>{project.videoUrl ? 'Click to watch' : 'Click to expand'}</span>
                   <span className="text-amber-400/70 group-hover:text-amber-400 transition-colors">
-                    Explore →
+                    {project.videoUrl ? 'Watch →' : 'Explore →'}
                   </span>
                 </div>
               </div>
@@ -226,12 +230,14 @@ export function SelectedWorks() {
         onPlayVideo={handlePlayVideoFromLightbox}
       />
 
-      {/* Video Modal if triggered from Lightbox */}
+      {/* Video Modal if triggered from card or Lightbox */}
       <VideoModal
         isOpen={activeVideoProject !== null}
         onClose={() => setActiveVideoProject(null)}
         videoUrl={activeVideoProject?.videoUrl}
         title={activeVideoProject?.title || ''}
+        resolution={activeVideoProject?.resolution}
+        duration={activeVideoProject?.duration}
       />
     </section>
   )

@@ -100,7 +100,7 @@ export const siteConfig: SiteConfig = {
       whatsapp: 'https://wa.me/8801313323612',
       instagram: 'https://www.instagram.com/prism__pulse',
       facebook: 'https://www.facebook.com/profile.php?id=61581682466136',
-      youtube: 'https://youtube.com/@TODO_REPLACE_CHANNEL'
+      youtube: 'https://www.youtube.com/@PrismPulse_art'
     }
   },
   navigation: [
